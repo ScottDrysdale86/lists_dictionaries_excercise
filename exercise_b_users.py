@@ -69,11 +69,18 @@ users["Erik"]["lottery_numbers"].sort()
 print(users["Erik"]["lottery_numbers"][0])
 
 # 6. Return an list of Avril's lottery numbers that are even
+even_list = []
+for number in users["Avril"]["lottery_numbers"]:
+    if number % 2 == 0:
+        even_list.append(number)
+print(even_list)
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"]["lottery_numbers"].append(7)
 # 8. Change Erik's hometown to Edinburgh
 users["Erik"]["home_town"] = "Edinburgh"
-
 # 9. Add a pet dog to Erik called "fluffy"
-
+users["Erik"]["pets"].append({"name": "fluffy", "species": "dog"})
+print(users["Erik"]["pets"])
 # 10. Add another person to the users dictionary
+users["Scott"] = "no info"
+print(users)
